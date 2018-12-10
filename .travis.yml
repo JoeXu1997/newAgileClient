@@ -9,6 +9,7 @@ cache:
 sudo: required
 install:
 - npm install -g httpserver
+- npm install --save-dev webpack-cli
 before_script:
 - npm run custom-build
 - cd dist && httpserver -p 8080 &
