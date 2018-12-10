@@ -1,0 +1,26 @@
+dist: trusty
+language: node_js
+node_js:
+- "stable"
+cache:
+  npm: true
+  directories:
+  - node_modules
+sudo: required
+install:
+- npm install -g httpserver
+- npm ci
+before_script:
+- npm run custom-build
+- cd dist && httpserver -p 8080 &
+script:
+- npx cypress run
+deploy:
+  provider: surge
+  skip_cleanup: true
+  domain: mymovie.surge.sh
+  project: ./dist
+  on:
+    branch: master
+
+
