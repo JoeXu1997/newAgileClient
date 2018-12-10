@@ -9,8 +9,8 @@ cache:
 sudo: required
 install:
 - npm install -g httpserver
-- npm ci
 before_script:
+- npm ci
 - npm run custom-build
 - cd dist && httpserver -p 8080 &
 script:
