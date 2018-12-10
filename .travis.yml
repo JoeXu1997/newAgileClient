@@ -2,10 +2,13 @@ dist: trusty
 language: node_js
 node_js:
 - "stable"
+cache:
+  directories:
+  - node_modules
 sudo: required
-install:
-- npm install -g httpserver
 before_script:
+- npm ci
+- npm install -g httpserver
 - npm run custom-build
 - cd dist && httpserver -p 8080 &
 script:
