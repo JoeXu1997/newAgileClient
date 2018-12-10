@@ -5,11 +5,8 @@ node_js:
 cache:
   directories:
   - node_modules
-sudo: required
-install:
-- npm install -g httpserver
-- npm ci
 before_script:
+- npm install -g httpserver
 - npm run custom-build
 - cd dist && httpserver -p 8080 &
 script:
