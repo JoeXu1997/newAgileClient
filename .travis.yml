@@ -6,7 +6,6 @@ cache:
   npm: true
   directories:
   - node_modules
-sudo: required
 install:
 - npm install -g httpserver
 - npm ci
