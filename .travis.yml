@@ -5,10 +5,11 @@ node_js:
 cache:
   directories:
   - node_modules
+sudo: required
 before_install:
 - npm install webpack -g
 - npm install webpack-cli -g
-- sudo npm i -D webpack
+- npm i -D webpack
 install:
 - npm install -g httpserver
 before_script:
