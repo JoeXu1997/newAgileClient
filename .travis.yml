@@ -3,11 +3,13 @@ language: node_js
 node_js:
 - "stable"
 cache:
-  npm: true
   directories:
   - node_modules
 before_install:
-- npm i -g npm@6.1.0
+- npm install webpack -g
+- npm install webpack-cli -g
+- npm install webpack --save-dev
+- npm install webpack-cli --save-dev
 install:
 - npm install -g httpserver
 before_script:
