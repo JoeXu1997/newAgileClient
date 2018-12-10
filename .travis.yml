@@ -10,7 +10,6 @@ sudo: required
 install:
 - npm install -g httpserver
 before_script:
-- npm ci
 - npm run custom-build
 - cd dist && httpserver -p 8080 &
 script:
