@@ -2,14 +2,7 @@ dist: trusty
 language: node_js
 node_js:
 - "stable"
-cache:
-  directories:
-  - node_modules
 sudo: required
-before_install:
-- npm install webpack -g
-- npm install webpack-cli -g
-- npm i -D webpack
 install:
 - npm install -g httpserver
 before_script:
