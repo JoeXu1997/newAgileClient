@@ -8,7 +8,7 @@ cache:
 before_install:
 - npm install webpack -g
 - npm install webpack-cli -g
-- npm i -D webpack
+- sudo npm i -D webpack
 install:
 - npm install -g httpserver
 before_script:
