@@ -8,8 +8,6 @@ cache:
 before_install:
 - npm install webpack -g
 - npm install webpack-cli -g
-- npm install webpack --save-dev
-- npm install webpack-cli --save-dev
 install:
 - npm install -g httpserver
 before_script:
